@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Merriweather:wght@300&family=Noto+Serif&family=Playfair+Display&display=swap');
+
+        :root{
+            --main-color: #d8a069;
+            --primary-color: #eff1f3;
+            --bg-color: #f6f8fb;
+            --hover: #d5b36f;
+            --black:#222;
+            --white:#fff;
+            --border:.1rem solid #aaa;
+            --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+            }
+            
+        *{
+            font-family: 'Dosis', sans-serif;
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+            text-transform: capitalize;
+            }
+        
+            
+        section{
+            padding: 2rem 7%;
+            }
+            
+        .heading{
+            text-align: center;
+            color: var(--main-color);
+            margin-bottom: 3rem;
+            font-size: 4rem;
+            margin-top: 4rem;
+            }
+            
+        .btn{
+            margin-top: 1rem;
+            display: inline-block;
+            background: var(--main-color);
+            border: var(--main-color);
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 1rem 3rem;
+            }
+            
+            .btn:hover{
+                background: var(--hover);
+            }
+            
+            /* header */
+            
+            .header{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: var(--box-shadow);
+                position: sticky;
+                top: 0;
+                left: 0; right: 0;
+                background: var(--primary-color);
+                z-index: 1000;
+            }
+            
+            .header .logo{
+                font-size: 2.5rem;
+                font-weight: bolder;
+                color: var(--black);
+            }
+            
+            .header .logo i{
+                color: var(--main-color);
+                padding-right: .5rem;
+            }
+            
+            .header .navbar a{
+                font-size: 1.7rem;
+                margin-left: 2.8rem;
+                color: var(--black);
+            }
+            
+            .header .navbar a:hover{
+                padding-bottom: .5rem;
+                color: var(--main-color);
+                border-bottom: 0.1rem solid var(--main-color);
+            }
+/* Footer */
+.footer{
+    position: absolute;
+    top: 2490px;
+    width: 100%;
+    height: 360px;
+    margin-bottom: 100px;
+    padding: 100px 15%;
+    background: #ffffff;
+    color: #000000;
+    display: flex;
+}
+.now{
+    position: absolute;
+    top: 170px ;
+}
+.be{
+    font-size: 26px;
+    position: absolute;
+    left:550px;
+    top: 50px;
+    font-family: 'Merriweather', serif;   
+}
+input {
+    position: absolute;
+    left: 615px;
+    top: 150px;
+    font-size: 20px;
+}
+h5{
+    font-size: 27px;
+    font-family: 'Merriweather', serif;   
+    position: absolute;
+    top: 50px;
+    left: 1100px;
+}
+
+ul {
+    display: flex;
+    position: absolute;
+    top: 2650px;
+    left: 1155px;
+    transform: translate(-50%, -50%);
+  }
+  
+  ul li {
+    list-style: none;
+  }
+  
+  ul li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+  ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  ul li a:hover:before {
+    top: 0;
+  }
+  
+  ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+  ul li:nth-child(2) a:before{
+    background: #55acee;
+  }
+  
+  ul li:nth-child(3) a:before {
+    background: #0077b5;
+  }
+  
+  ul li:nth-child(4) a:before {
+    background: #dd4b39;
+  }
+.now{
+    position: absolute;
+    left: 640px;
+    top: 220px;
+
+}
+.b1{
+    border-radius: 15px;
+    position: absolute;
+    top: 250px;
+    left: 200px;
+}
+.home{
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 55px;
+    left: 240px; 
+    color: #000;  
+    background-image: linear-gradient(
+        to right,
+        #fc56bd,
+        #f6cb23 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+}
+.home:hover{
+    background-position: 0;
+}
+.home:hover::before {
+    width: 100%;
+  }
+  .home:before {
+    content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.9px;
+  }
+.about{
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 100px;
+    left: 240px; 
+    color: #000; 
+    background-image: linear-gradient(
+        to right,
+        #fc56bd,
+        #f6cb23 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;
+}       
+.about:hover{
+    background-position: 0;
+}
+.about:hover::before {
+    width: 100%;
+  }
+  .about:before {
+    content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.9px;
+  }
+.menu{
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 143px;
+    left: 240px;
+    color: #000; 
+    background-image: linear-gradient(
+        to right,
+        #fc56bd,
+        #f6cb23 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;           
+}
+.menu:hover{
+    background-position: 0;
+}
+.menu:hover::before {
+    width: 100%;
+  }
+  .menu:before {
+    content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.9px;
+  }
+.gallery{
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 186px;
+    left: 240px; 
+    color: #000;
+    background-image: linear-gradient(
+        to right,
+        #fc56bd,
+        #f6cb23 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;       
+}
+.gallery:hover{
+    background-position: 0;
+}
+.gallery:hover::before {
+    width: 100%;
+  }
+  .gallery:before {
+    content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.9px;
+  }
+.reviews{
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 230px;
+    left: 240px;
+    color: #000;
+    background-image: linear-gradient(
+        to right,
+        #fc56bd,
+        #f6cb23 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;       
+}
+.reviews:hover{
+    background-position: 0;
+}
+.reviews:hover::before {
+    width: 100%;
+  }
+  .reviews:before {
+    content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.9px;
+  }
+.order{
+    font-size: 23px;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 274px;
+    left: 240px;  
+    color: #000; 
+    background-image: linear-gradient(
+        to right,
+        #fc56bd,
+        #f6cb23 50%,
+        #000 50%
+      );
+      background-size: 200% 100%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease-in-out;  
+}
+.order:hover::before {
+    width: 100%;
+  }
+.order:hover{             
+    background-position: 0;
+}
+.order:before {
+    content: '';
+    background: #000000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.9px;
+  }
+  button{
+    font-size: 18px;
+    background-image: linear-gradient(to right,#ff66c4, #ffde59);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top:405px;
+    left: 90px
+}
+button:hover{
+    background-image: linear-gradient(to right,#ffde59,#ff66c4);
+    padding: 15px 25px;
+
+}
+        .drip{
+            width: 860px;
+            height: 450px;   
+            position: absolute;
+            top: 1970px;
+        }
+        .people{
+            height: 449px;
+            width: 565px;
+            position: absolute;
+            top: 1970px;
+            left: 860px;
+        }
+        .on{
+            position: absolute;
+            top: 2000px;
+        }
+    
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .go{
+            position: absolute;
+            top: -20px;
+            left: -80px;
+            width: 300px;
+            height: 150px;
+        }
+        .Main{
+            height: 84%;
+            width: 100%;
+        }
+        .comp{
+            position: absolute;
+            top: 1500px;
+            width: 100%;
+            height: 400px;
+        }
+  
+
+        h1{
+            position: absolute;
+            top: 860px;
+            left: 150px;
+            font-size: 31px;
+            font-family: 'Merriweather', serif;   
+        }
+        img .A{
+            height: 10%;
+            position: absolute;
+            top: -10px;
+            
+        }
+        .rev1{
+            display: flex;
+            position: absolute;
+            top: 910px;
+            left: 50px;
+        }
+        .box1:hover{
+            box-shadow: 0px 0px 30px black;
+        }
+        .box1{
+            padding-top: 200px;
+            padding-bottom: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: white;
+            font-size: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #f8c0c0, #fce2e2);
+
+        }
+        .i1{
+            width: 700px;
+            height: 430px;
+            position: absolute;
+            top: 870px;
+            left: 7px;
+        }
+        h2{
+            position: absolute;
+            top: 440px;
+            left: 213px;
+            font-size: 25px;
+        }
+        .box2{
+            padding-top: 200px;
+            padding-bottom: 95px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: white;
+            font-size: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #f5f6a5, #fcfcd8);
+        }
+        .box2:hover{
+            box-shadow: 0px 0px 30px black;
+        }
+        .rev2{
+            display: flex;
+            position: absolute;
+            top: 910px;
+            left: 435px;
+        }
+        h3{
+            position: absolute;
+            top: 440px;
+            left: 200px;
+            font-size: 25px;
+        }
+        .i2{
+            width: 480px;
+            height: 290px;
+            position: absolute;
+            top: 905px;
+            left: 465px;
+        }
+        .box3{
+            padding-top: 200px;
+            padding-bottom: 95px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background-color: white;
+            font-size: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #82d7b2, #cbefe0);
+            perspective: 1000px;
+        }
+        .box3:hover{
+            box-shadow: 0px 0px 30px black;
+        }
+        .rev3{
+            display: flex;
+            position: absolute;
+            top: 910px;
+            left: 815px;
+            
+        }
+        h4{
+            position: absolute;
+            top: 405px;
+            left: 115px;
+            font-size: 25px;
+        }
+        .i3{
+            width: 590px;
+            height: 355px;
+            position: absolute;
+            top: 880px;
+            left: 805px;
+        }
+          
+        .on{
+            position: absolute;
+            top: 2200px;
+            left: 350px;
+        }
+
+        .container {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 355px;
+            top: 1825px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .center {
+            width: 180px;
+            height: 60px;
+            position: absolute;
+          }
+          
+          .sec {
+            width: 170px;
+            height: 60px;
+            cursor: pointer;
+            background: white;
+            border: 2px solid #91C9FF;
+            outline: none;
+            transition: 1s ease-in-out;
+          }
+          
+          svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            fill: none;
+            stroke: #fff;
+            stroke-dasharray: 150 480;
+            stroke-dashoffset: 150;
+            transition: 1s ease-in-out;
+          }
+          
+          .sec:hover {
+            transition: 1s ease-in-out;
+            background: #74b5f6;
+          }
+          
+          .sec:hover svg {
+            stroke-dashoffset: -480;
+          }
+          
+          .sec span {
+            color: rgb(0, 0, 0);
+            font-size: 23px;
+            font-weight: 120px;
+          }
+             
+    </style>
+</head>
+<body>
+     <!--Navigation bar-->  
+     <section class="header">
+        <!-- Logo -->
+        <img class="go" src="WHO WE ARE We are a creative-led, community-spirited company on a mission to make better ice creams and bring people together. (1).png">
+          <a href="#" class="logo"> <i class="fas fa-ice-cream"></i> Ice cream </a>
+          
+          <nav class="navbar">
+              <a href="index.html">home</a>
+              <a href="about.html">about</a>
+              <a href="flavors.html">Flavors</a>
+              <a href="gallery.html">gallery</a>
+              <a href="reviews.html">reviews</a>
+              <a href="#order">order</a>
+          </nav>   
+      </section>
+
+     <!-- Main image -->
+     <img class="Main" src="280701-6_Best_Keto_Ice_Creams-1296x728-header-transformed.jpeg">
+     
+    <div>
+        <img class="drip" src="Screenshot 2023-05-31 at 1.51.21 AM.png">
+        <img class="people" src="friends-having-fun-at-their-reunion_23-2149144282.avif">
+        
+    </div>
+
+    <div class="container">
+        <div class="center">
+          <button class="sec">
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>Send Card</span>
+          </button>
+        </div>
+      </div>
+
+    <!-- Review div boxes-->
+    <h1>REVIEWS</h1>
+     <!--Review 1-->
+    <section class="rev1">
+        <div class="box1">
+            <p><q>This is a favorite stop for us <br>every time we are here. Most<br> of the visits multiple stops.<br> The ice cream is truly incredible.<br>The ice cream is not super <br>sweet it is sweetened just<br> sufficiently, the flavors<br> very identifiable.</q></p><br><br>
+            <h2>Ann Arbor</h2>
+        </div>
+    </section>
+    <img class="i1" src="WHO WE ARE We are a creative-led, community-spirited company on a mission to make better ice creams and bring people together. (4).png">
+
+    <!--Review 2-->
+    <section class="rev2">
+    <div class="box2">
+        <p><q>I recently chanced upon this<br> Ice cream at a local store.<br>  And I’m hooked. I loved it so<br>  much and have tried all the<br>  flavours I got my hands on.<br>  It tastes so good that you<br>  won’t believe it’s good <br> for you!</q></p>        
+        <h3>David North</h3>
+    </div>
+    </section>
+    <img class="i2" src="p7.png">
+
+     <!--Review 3-->
+    <section class="rev3">
+    <div class="box3">
+        <p><q>Excellent! We loved the<br> taste and flavor of the ice<br> cream, perfect amount of sweet<br> and creamy. This is definitely <br>ice cream you get to eat <br>on a regular basis and not feel <br>guilty! It’s amazing and if you <br>see it buy it.</q></p>
+        <h4>Mahya Amir</h4>
+    </div>
+    </section>
+    <img class="i3" src="p4.png">
+
+    <img class="comp" src="Screenshot 2023-05-31 at 4.24.57 AM.png">
+
+
+
+   
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="d1">
+              <a class="home" href="index.html">Home</a>
+              <a class="about" href="about.html">About</a>
+              <a class="menu" href="flavors.html">Flavors</a>
+              <a class="gallery" href="gallery.html">Gallery</a>
+              <a class="reviews" href="reviews">Reviews</a>
+              <a class="order" href="">Order</a>
+            </div>
+            <div class="d2">
+              <h4 class="be">Be the first to know about<br>new flavors and offers</h4>
+              <form>
+                <input type="text" placeholder="   Your Email Address">
+                <button class="now" type="submit">Subscribe Now</button>
+              </form>
+            <div class="d3">
+              <h5>Contact</h5>
+            </div>      
+            </div>
+          </div>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f icon"></i>    </a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter icon"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+            <li>
+              <a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+          </ul> 
+   
+</body>
+</html>

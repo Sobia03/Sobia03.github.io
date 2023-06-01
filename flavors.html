@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavours</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Merriweather:wght@300&family=Noto+Serif&family=Playfair+Display&display=swap');
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+        
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+  
+        
+            
+              button{
+                font-size: 18px;
+                background-image: linear-gradient(to right,#ff66c4, #ffde59);
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                position: absolute;
+                top:430px;
+                left: 100px
+              }
+              .swiper-button-next{
+                color: black;
+              }
+              .swiper-button-prev{
+                color: black;
+              }  
+        
+        :root{
+            --main-color: #d8a069;
+            --primary-color: #eff1f3;
+            --bg-color: #f6f8fb;
+            --hover: #d5b36f;
+            --black:#222;
+            --white:#fff;
+            --border:.1rem solid #aaa;
+            --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+            }
+            
+        *{
+            font-family: 'Dosis', sans-serif;
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(.43,1.1,.62,1.08);
+            text-transform: capitalize;
+            }
+        
+            
+        section{
+            padding: 2rem 7%;
+            }
+            
+        .heading{
+            text-align: center;
+            color: var(--main-color);
+            margin-bottom: 3rem;
+            font-size: 4rem;
+            margin-top: 4rem;
+            }
+               
+            /* header */
+            
+            .header{
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: var(--box-shadow);
+                position: sticky;
+                top: 0;
+                left: 0; right: 0;
+                background: var(--primary-color);
+                z-index: 1000;
+            }
+            
+            .header .logo{
+                font-size: 2.5rem;
+                font-weight: bolder;
+                color: var(--black);
+            }
+            
+            .header .logo i{
+                color: var(--main-color);
+                padding-right: .5rem;
+            }
+            
+            .header .navbar a{
+                font-size: 1.7rem;
+                margin-left: 2.8rem;
+                color: var(--black);
+            }
+            
+            .header .navbar a:hover{
+                padding-bottom: .5rem;
+                color: var(--main-color);
+                border-bottom: 0.1rem solid var(--main-color);
+            }
+
+        .c{
+            position: absolute;
+            top:700px;
+            left:90px;
+            width: 500px;
+            height: 400px;  
+
+            transition: all .50s ease;         
+        }
+        .c:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .d{
+            position: absolute;
+            top:700px;
+            left:470px;
+            width: 500px;
+            height: 400px;  
+
+            transition: all .50s ease; 
+        }
+        .d:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .e{
+            position: absolute;
+            top:680px;
+            left:855px;
+            width: 500px;
+            height: 400px;  
+            transition: all .50s ease; 
+        }
+        .e:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .f{
+            position: absolute;
+            top:980px;
+            left:90px;
+            width: 500px;
+            height: 400px;  
+            transition: all .50s ease; 
+        }
+        .f:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .g{
+            position: absolute;
+            top:980px;
+            left:470px;
+            width: 500px;
+            height: 400px;  
+            transition: all .50s ease; 
+        }
+        .g:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .h{
+            position: absolute;
+            top:980px;
+            left:855px;
+            width: 500px;
+            height: 400px;  
+            transition: all .50s ease; 
+        }
+        .h:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .i{
+            position: absolute;
+            top:1300px;
+            left:120px;
+            width: 415px;
+            height: 315px;  
+            transition: all .50s ease; 
+        }
+        .i:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .j{
+            position: absolute;
+            top:1255px;
+            left:470px;
+            width: 510px;
+            height: 410px;  
+            transition: all .50s ease; 
+        }
+        .j:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        .k{
+            position: absolute;
+            top:1255px;
+            left:855px;
+            width: 510px;
+            height: 410px;  
+            transition: all .50s ease; 
+        }
+        .k:hover {
+            animation: shake 0.5s;
+            animation-iteration-count: infinite;
+        }
+        h2{
+            position: absolute;
+            top:748px;
+            left:110px;
+            font-size: 40px;
+        }
+        img{
+            height: 75%;
+            width: 100%;
+        }
+        .r{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 263px;
+            top: 1000px;
+            font-weight:545;
+        }
+        .s{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 632px;
+            top: 1000px;
+            font-weight:545;
+        }
+        .t{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 1020px;
+            top: 1000px;
+            font-weight:545;
+        }
+        .u{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 267px;
+            top: 1280px;
+            font-weight:545;
+        }
+        .v{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 660px;
+            top: 1280px;
+            font-weight:545;
+        }
+        .w{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 1020px;
+            top: 1280px;
+            font-weight:545;
+        }
+        .x{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 250px;
+            top: 1570px;
+            font-weight:545;
+        }
+        .y{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 650px;
+            top: 1565px;
+            font-weight:545;
+        }
+        .z{
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position: absolute;
+            left: 1020px;
+            top: 1563px;
+            font-weight:545;
+        }
+        button:hover{
+            background-image: linear-gradient(to right,#ffde59,#ff66c4);
+            padding: 15px 25px;
+        
+        }
+        
+        @keyframes shake {
+            0% { transform: translate(0.5px, 0.5px) rotate(0deg); }
+            10% { transform: translate(-0.5px, -1px) rotate(-1deg); }
+            20% { transform: translate(-1.5px, 0px) rotate(1deg); }
+            30% { transform: translate(1.5px, 1px) rotate(0deg); }
+            40% { transform: translate(0.5px, -0.5px) rotate(1deg); }
+            50% { transform: translate(-0.5px, 1px) rotate(-1deg); }
+            60% { transform: translate(-1.5px, 0.5px) rotate(0deg); }
+            70% { transform: translate(1.5px, 0.5px) rotate(-1deg); }
+            80% { transform: translate(-0.5px, -0.5px) rotate(1deg); }
+            90% { transform: translate(0.5px, 1px) rotate(0deg); }
+            100% { transform: translate(0.5px, -1px) rotate(-1deg); }
+        }
+
+
+        .footer{
+            position: absolute;
+            top:2350px;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 100px;
+            padding: 100px 15%;
+            background: #ffffff;
+            color: #000000;
+            display: flex;
+        }
+        .now{
+            position: absolute;
+            top: 170px ;
+        }
+        h4{
+            font-size: 26px;
+            position: absolute;
+            left:560px;
+            top: 50px;
+            font-family: 'Merriweather', serif;   
+        }
+        input {
+            position: absolute;
+            left: 615px;
+            top: 150px;
+            font-size: 20px;
+        }
+        h5{
+            font-size: 27px;
+            font-family: 'Merriweather', serif;   
+            position: absolute;
+            top: 50px;
+            left: 1100px;
+        }
+        
+        ul {
+            display: flex;
+            position: absolute;
+            top: 2560px;
+            left: 1155px;
+            transform: translate(-50%, -50%);
+          }
+          
+          ul li {
+            list-style: none;
+          }
+          
+          ul li a {
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 80px;
+            font-size: 35px;
+            margin: 0 10px;
+            display: block;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #fff;
+            z-index: 1;
+          }
+          
+          ul li a .icon {
+            position: relative;
+            color: #262626;
+            transition: .5s;
+            z-index: 3;
+          }
+          
+          ul li a:hover .icon {
+            color: #fff;
+            transform: rotateY(360deg);
+          }
+          
+          ul li a:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f00;
+            transition: .5s;
+            z-index: 2;
+          }
+          
+          ul li a:hover:before {
+            top: 0;
+          }
+          
+          ul li:nth-child(1) a:before{
+            background: #3b5999;
+          }
+          
+          ul li:nth-child(2) a:before{
+            background: #55acee;
+          }
+          
+          ul li:nth-child(3) a:before {
+            background: #0077b5;
+          }
+          
+          ul li:nth-child(4) a:before {
+            background: #dd4b39;
+          }
+        .now{
+            position: absolute;
+            left: 640px;
+            top: 220px;
+        
+        }
+        .b1{
+            border-radius: 15px;
+            position: absolute;
+            top: 250px;
+            left: 200px;
+        }
+        .home{
+            font-size: 23px;
+            font-family: 'Merriweather', serif;
+            position: absolute;
+            top: 55px;
+            left: 240px; 
+            color: #000;  
+        }
+        .home:hover{
+            text-decoration: underline;
+        }
+        .about{
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+            position: absolute;
+            top: 100px;
+            left: 240px; 
+            color: #000;    
+        
+        }
+        .about:hover{
+            text-decoration: underline;
+        }
+        .menu{
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+            position: absolute;
+            top: 143px;
+            left: 240px;
+            color: #000;     
+        }
+        .menu:hover{
+            text-decoration: underline;
+        }
+        .gallery{
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+            position: absolute;
+            top: 186px;
+            left: 240px; 
+            color: #000;    
+        }
+        .gallery:hover{
+            text-decoration: underline;
+        }
+        .reviews{
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+            position: absolute;
+            top: 230px;
+            left: 240px;
+            color: #000;     
+        }
+        .reviews:hover{
+            text-decoration: underline;
+        }
+        .order{
+            font-size: 22px;
+            font-family: 'Merriweather', serif;
+            position: absolute;
+            top: 274px;
+            left: 240px;  
+            color: #000;   
+        }
+        .order:hover{
+            text-decoration: underline;
+        }
+
+
+        .swiper {
+            width: 100%;
+            height: 75%;
+          }
+      
+          .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+      
+          .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .go{
+            position: absolute;
+            top: -20px;
+            left: -80px;
+            width: 300px;
+            height: 150px;
+        }
+        .video1{
+            position: absolute;
+            top: 1870px;
+            left: 65px;
+            width: 630px;
+            height: 400px;
+        }
+        .video2{
+            position: absolute;
+            top: 1870px;
+            left: 735px;
+            width: 630px;
+            height: 400px;
+        }
+        .ordernow{
+            font-size: 25px;
+            background-image: linear-gradient(to right,#ff66c4, #ffde59);
+            color: #fff;
+            padding: 13px 22px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top:1700px;
+            left: 650px
+        }
+        .ordernow:hover{
+            background-image: linear-gradient(to right,#ffde59,#ff66c4);
+            padding: 15px 25px;
+        
+        }
+                    
+    </style>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <section class="header">
+        <!-- Logo -->
+        <img class="go" src="WHO WE ARE We are a creative-led, community-spirited company on a mission to make better ice creams and bring people together. (1).png">
+           <a href="#" class="logo"> <i class="fas fa-ice-cream"></i> Ice cream </a>
+         <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a href="flavors.html">Flavors</a>
+            <a href="gallery.html">gallery</a>
+            <a href="reviews.html">reviews</a>
+            <a href="#order">order</a>
+        </nav>
+    </section>
+
+    <!--Flavors-->
+    
+    <h2>Flavors</h2>
+    <img class="c" src="vibes__6_-removebg-preview.png">
+    <h3 class="r">Cotton Candy</h3>
+    <img class="d" src="vibes (8).png">
+    <h3 class="s">Peacan Caramel</h3>
+    <img class="e" src="vibes (9).png">
+    <h3 class="t">Mint Choco Chip</h3>
+    <img class="f" src="vibes (10).png">
+    <h3 class="u">Rocky Road</h3>
+    <img class="g" src="vibes (11).png">
+    <h3 class="v">Raspberry</h3>
+    <img class="h" src="vibes (12).png">
+    <h3 class="w">Rainbow Sherbet</h3>
+    <img class="i" src="vibes (13).png">
+    <h3 class="x">Birthday Cake</h3>
+    <img class="j" src="vibes (14).png">
+    <h3 class="y">Coffee Crunch</h3>
+    <img class="k" src="vibes (15).png">
+    <h3 class="z">Caramel Brownie</h3>
+
+    <button class="ordernow">Order Now</button>
+
+    <!-- Embedded videos-->
+  <iframe class="video1" width="560" height="315" src="https://www.youtube.com/embed/kWpXIlvZyGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe class="video2" width="560" height="315" src="https://www.youtube.com/embed/Z6U3poSlcAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="d1">
+          <a class="home" href="index.html">Home</a>
+          <a class="about" href="about.html">About</a>
+          <a class="menu" href="flavors.html">Flavors</a>
+          <a class="gallery" href="gallery.html">Gallery</a>
+          <a class="reviews" href="reviews.html">Reviews</a>
+          <a class="order" href="">Order</a>
+        </div>
+        <div class="d2">
+          <h4>Be the first to know about<br>new flavors and offers</h4>
+          <form>
+            <input type="text" placeholder="   Your Email Address">
+            <button class="now" type="submit">Subscribe Now</button>
+          </form>
+        <div class="d3">
+          <h5>Contact</h5>
+        </div>      
+        </div>
+      </div>
+      <ul>
+        <li>
+          <a href="#">
+            <i class="fab fa-facebook-f icon"></i>    </a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter icon"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+        <li>
+          <a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+      </ul> 
+
+      <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="vibes (1).png"></div>
+      <div class="swiper-slide"><img src="vibes (3).png"></div>
+      <div class="swiper-slide"><img src="vibes (4).png"></div>
+      <div class="swiper-slide"><img src="vibes (17).png"></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    <div class="autoplay-progress">
+      <svg viewBox="0 0 48 48">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+      <span></span>
+    </div>
+  </div>
+  
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+
+
+<script src="flavors.js"></script>
+</body>
+</html>
